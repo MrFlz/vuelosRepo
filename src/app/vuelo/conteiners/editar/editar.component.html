@@ -1,0 +1,12 @@
+<form [formGroup]="vueloForm" (ngSubmit)="edit()">
+    <label>
+        ID:
+        <input type="text" formControlName="status">
+    </label>
+
+    <button [disabled]="!vueloForm.valid" >UPDATE</button>
+    
+    <p>
+        Value: {{ vueloForm.status }}
+    </p>
+</form>
