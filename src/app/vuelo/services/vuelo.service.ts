@@ -7,21 +7,30 @@ import { Vuelo } from '../dto/vuelo';
   providedIn: 'root'
 })
 export class VueloService {
+  r: any;
 
   constructor(
     private http: HttpClient
   ) { }
+
+  /*getVuelo(){
+    this.r
+    .get('https://localhost:5001/vuelo/aget',{})
+    .pipe(
+      tap(d => console.log(d))
+    ).subscribe();
+  }*/
   
-  getRoles(): Observable<Vuelo[]>{
+  get(): Observable<Vuelo[]>{
     return this.http.get<Vuelo[]>('https://localhost:5001/vuelo/aget');
   }
 
-  findBy(id: string): Observable<Vuelo[]>{
+  /*findBy(id: string): Observable<Vuelo[]>{
     return this.http.get<Vuelo[]>('https://localhost:5001/vuelo/aget/'+id);
   }
 
   update(vuelo: Vuelo, id: string): Observable<any>{
     return this.http.put<any>('https://localhost:5001/vuelo/aput/'+id, vuelo);
-  }
+  }*/
 
 }

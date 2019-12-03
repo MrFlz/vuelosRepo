@@ -6,17 +6,14 @@ import { ListaComponent } from './vuelo/components/lista/lista.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NotFoundComponent } from './not-found/not-found.component';
-import { EditarComponent } from './vuelo/conteiners/editar/editar.component';
-import { VueloComponent } from './vuelo/conteiners/vuelo.component';
+import { NotFoundComponent } from './not-found/not-found.component';  
+import { VueloService } from './vuelo/services/vuelo.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent,
-    VueloComponent,
-    NotFoundComponent,
-    EditarComponent,
+    ListaComponent, 
+    NotFoundComponent, 
     
   ],
   imports: [
@@ -26,7 +23,9 @@ import { VueloComponent } from './vuelo/conteiners/vuelo.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [
+    VueloService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

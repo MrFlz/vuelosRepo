@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component'; 
-import { ListaComponent } from './vuelo/components/lista/lista.component';
-import { VueloComponent } from './vuelo/conteiners/vuelo.component'; 
+import { ListaComponent } from './vuelo/components/lista/lista.component'; 
 import { AppComponent } from './app.component';
-
 
 const routes: Routes = [
   {
@@ -17,7 +15,7 @@ const routes: Routes = [
   }, 
   {
     path: '', 
-    redirectTo: '/vuelos',
+    redirectTo: '/listaVuelos',
     pathMatch: 'full'
   },
   {

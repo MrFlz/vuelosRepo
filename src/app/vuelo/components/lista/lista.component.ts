@@ -4,8 +4,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista',
-  templateUrl: './lista.component.html',
-  //styleUrls: ['./lista.component.sass']
+  templateUrl: './lista.component.html', 
 })
 export class ListaComponent implements OnInit {
 
